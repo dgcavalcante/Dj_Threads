@@ -43,10 +43,10 @@ O DJ interage com o sistema através de comandos de texto no terminal, controlan
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/dj-console-simulator.git
+git clone https://github.com/seu-usuario/Dj_Threads.git
 
 # Acesse a pasta do projeto
-cd dj-console-simulator
+cd Dj_Threads
 
 # Compile o projeto
 javac -d bin src/*.java
