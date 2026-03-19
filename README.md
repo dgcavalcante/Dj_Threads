@@ -48,6 +48,9 @@ git clone https://github.com/seu-usuario/Dj_Threads.git
 # Acesse a pasta do projeto
 cd Dj_Threads
 
+# criar a pasta bin
+mkdir bin
+
 # Compile o projeto
 javac -d bin src/DjThreads.java src/Instrumento.java
 
