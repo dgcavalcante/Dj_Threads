@@ -57,7 +57,7 @@ java -cp bin Main
 
 ---
 
-## 🎮 Menu disponíveis
+## 🎮 Menu disponível
 
 Após iniciar o programa, você pode escolher os seguintes comandos no terminal:
 
