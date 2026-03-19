@@ -15,7 +15,7 @@ O DJ interage com o sistema através de comandos de texto no terminal, controlan
 ## 🧠 Conceitos aplicados
 
 - **Multithreading** — cada instrumento é uma thread independente
-- **Sincronização** — uso de `synchronized` / `ReentrantLock` para proteger o estado compartilhado
+- **Sincronização** — uso de `synchronized` para proteger o estado compartilhado
 - **Comunicação entre threads** — `wait()` / `notify()` para pausar e retomar faixas
 - **Variáveis voláteis** — uso de `volatile` para garantir visibilidade entre threads
 - **Controle de execução** — `sleep()` e `interrupt()` para gerenciar o ciclo de vida das threads
@@ -57,15 +57,15 @@ java -cp bin Main
 
 ---
 
-## 🎮 Comandos disponíveis
+## 🎮 Menu disponíveis
 
-Após iniciar o programa, você pode digitar os seguintes comandos no terminal:
+Após iniciar o programa, você pode escolher os seguintes comandos no terminal:
 
 ```
-pause <instrumento>    → Pausa a faixa especificada
-resume <instrumento>   → Retoma a faixa especificada
-status                 → Exibe o estado atual de todas as faixas
-stop                   → Encerra todos os instrumentos e fecha o programa
+1.adicionar <instrumento>    → adiciona um instrumento na mesa
+2.pausar <instrumento>   → Pausa a faixa especificada
+3.retomar <instrumento>    → Exibe o estado atual de todas as faixas
+4.stop                   → Encerra todos os instrumentos e fecha o programa
 ```
 
 **Exemplo:**
