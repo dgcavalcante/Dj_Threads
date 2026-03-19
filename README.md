@@ -49,10 +49,10 @@ git clone https://github.com/seu-usuario/Dj_Threads.git
 cd Dj_Threads
 
 # Compile o projeto
-javac -d bin src/*.java
+javac -d bin src/DjThreads.java src/Instrumento.java
 
 # Execute
-java -cp bin Main
+java -cp bin DjThreads
 ```
 
 ---
@@ -64,27 +64,50 @@ Após iniciar o programa, você pode escolher os seguintes comandos no terminal:
 ```
 1.adicionar <instrumento>    → adiciona um instrumento na mesa
 2.pausar <instrumento>   → Pausa a faixa especificada
-3.retomar <instrumento>    → Exibe o estado atual de todas as faixas
-4.stop                   → Encerra todos os instrumentos e fecha o programa
+3.retomar <instrumento>    → Retoma o item especificado
+4.ver mesa Dj             → exibe o estado dos instrumentos e mostra eles tocando em paralelo
+5.encerrar mesa Dj           → Encerra todos os instrumentos e fecha o programa
 ```
 
-**Exemplo:**
-```
-> pause bateria
-🔇 Bateria pausada.
-
-> resume baixo
-🎵 Baixo retomado.
-```
 
 ---
 
 ## 👥 Participantes
 
-| Nome | GitHub |
-|---|---|
-| — | — |
-| — | — |
-| — | — |
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/dgcavalcante">
+        <img src="https://github.com/dgcavalcante.png" width="80px" style="border-radius: 50%"/><br>
+        <sub><b>Diogo Cavalcante</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://https://github.com/PvssDev">
+        <img src="https://github.com/PvssDev.png" width="80px" style="border-radius: 50%"/><br>
+        <sub><b>Pedro Vinicius</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SergioGSF">
+        <img src="https://github.com/SergioGSF.png" width="80px" style="border-radius: 50%"/><br>
+        <sub><b>Sergio Gonçalves</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/duduhnrq">
+        <img src="https://github.com/duduhnrq.png" width="80px" style="border-radius: 50%"/><br>
+        <sub><b>Eduardo Henrique</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MarcosFraga0">
+        <img src="https://github.com/MarcosFraga0.png" width="80px" style="border-radius: 50%"/><br>
+        <sub><b>Marcos Taveira</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
+
