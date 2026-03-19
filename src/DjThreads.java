@@ -1,4 +1,5 @@
 package src;
+
 import java.util.Scanner;
 import java.io.IOException;
 import java.util.HashMap;
@@ -38,9 +39,11 @@ public class DjThreads {
 
                 case (1): {
                     System.out.print("Informe o nome do instrumento: ");
-                    String nome = sc.nextLine();
+                    String nome = sc.nextLine().trim().toLowerCase();
+                    System.out.println();
                     System.out.print("Informe o som que o instrumento emite: ");
                     String batida = sc.nextLine();
+                    System.out.println();
                     System.out.print("Informe o intervalo que o instrumento vai tocar(ms): ");
                     int intervalo = sc.nextInt();
                     sc.nextLine();
@@ -54,7 +57,23 @@ public class DjThreads {
                     break;
                 }
                 case (2): {
-                    System.out.println("Nome do instrumento que deseja pausar: ");
+                    System.out.println("╔══════════════════════════════╗");
+                    System.out.println("║      Instrumentos rodando    ║");
+                    System.out.println("╠══════════════════════════════╣");
+
+                    Instrumento[] inst = instrumentos.values().toArray(new Instrumento[0]);
+                    for (int i = 0; i < inst.length; i++) {
+                        String estado = inst[i].pausado ? "⏸ PAUSADO" : "▶ TOCANDO";
+                        if (estado == "▶ TOCANDO") {
+                            System.out.printf("║ %-10s  %-15s ║%n", inst[i].getNome(), estado);
+                        }
+                    }
+                    System.out.println("╠══════════════════════════════╣");
+                    System.out.println("║                              ║");
+                    System.out.println("╚══════════════════════════════╝");
+                    System.out.println();
+
+                    System.out.print("Nome do instrumento que deseja pausar: ");
                     String nome = sc.nextLine();
                     Instrumento instr = instrumentos.get(nome);
 
@@ -68,7 +87,24 @@ public class DjThreads {
                     break;
                 }
                 case (3): {
-                    System.out.println("Nome do instrumento que deseja retomar: ");
+
+                    System.out.println("╔══════════════════════════════╗");
+                    System.out.println("║      Instrumentos pausados   ║");
+                    System.out.println("╠══════════════════════════════╣");
+
+                    Instrumento[] inst = instrumentos.values().toArray(new Instrumento[0]);
+                    for (int i = 0; i < inst.length; i++) {
+                        String estado = inst[i].pausado ? "⏸ PAUSADO" : "▶ TOCANDO";
+                        if (estado == "⏸ PAUSADO") {
+                            System.out.printf("║ %-10s  %-15s ║%n", inst[i].getNome(), estado);
+                        }
+                    }
+                    System.out.println("╠══════════════════════════════╣");
+                    System.out.println("║                              ║");
+                    System.out.println("╚══════════════════════════════╝");
+                    System.out.println();
+
+                    System.out.print("Nome do instrumento que deseja retomar: ");
                     String nome = sc.nextLine();
                     Instrumento instr = instrumentos.get(nome);
 
@@ -88,7 +124,7 @@ public class DjThreads {
 
                     while (true) {
 
-                        System.out.print("\033[H\033[2J"); // limpa tudo e vai pro topo
+                        System.out.print("\033[H\033[2J");
                         System.out.flush();
 
                         System.out.println("╔══════════════════════════════╗");
@@ -113,7 +149,7 @@ public class DjThreads {
                                 limparTerminal();
                                 break;
                             }
-                            Thread.sleep(2000);
+                            Thread.sleep(3000);
                         } catch (IOException | InterruptedException e) {
                             Thread.currentThread().interrupt();
                             break;
@@ -131,7 +167,7 @@ public class DjThreads {
 
                     sc.close();
                     rodando = false;
-                    System.out.println("Mesa Dj encerrada!");
+                    System.out.println("Mesa Dj ENCERRADA.");
                     break;
                 }
                 default:

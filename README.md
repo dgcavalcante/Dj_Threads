@@ -69,8 +69,7 @@ Após iniciar o programa, você pode escolher os seguintes comandos no terminal:
 5.encerrar mesa Dj           → Encerra todos os instrumentos e fecha o programa
 ```
 
-
----
+--
 
 ## 👥 Participantes
 
