@@ -64,8 +64,9 @@ Após iniciar o programa, você pode escolher os seguintes comandos no terminal:
 ```
 1.adicionar <instrumento>    → adiciona um instrumento na mesa
 2.pausar <instrumento>   → Pausa a faixa especificada
-3.retomar <instrumento>    → Exibe o estado atual de todas as faixas
-4.stop                   → Encerra todos os instrumentos e fecha o programa
+3.retomar <instrumento>    → Retoma o item especificado
+4.Ver mesa Dj             → exibe o estado dos instrumentos e mostra eles tocando em paralelo
+5.stop                   → Encerra todos os instrumentos e fecha o programa
 ```
 
 **Exemplo:**
